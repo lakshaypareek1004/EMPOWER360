@@ -16,6 +16,11 @@ import Circles from './Pages/Circles'
 import Activity from './Pages/Activity'
 import Leaderboard from './Pages/Leaderboard';
 import Feedback from './Pages/Feedback';
+import ChallengeWork from './Pages/ChallengeWork';
+import TeachbackWork from './Pages/TeachbackWork';
+import ChallengeRedirect from './ChallengeRedirect';
+import Teachbacks from './Pages/Teachbacks';
+import Portfolio from './Pages/Portfolio';
 
 const App = () => {
   return (
@@ -30,6 +35,14 @@ const App = () => {
       <Route path ="/signup" element ={<Signup/>}/>
       <Route path ="/challenges" element ={<Challenges/>}/>
       <Route path ="/leaderboard" element ={<Leaderboard/>}/>
+      <Route
+          path="/teachbacks"
+          element={
+            <ProtectedRoute>
+              <Teachbacks />
+            </ProtectedRoute>
+          }
+        />
       <Route path="/challenges/create"
         element={
           <ProtectedRoute>
@@ -64,6 +77,55 @@ element={
     <Feedback/>
   </ProtectedRoute>
 }/>
+<Route
+  path="/feedback/:id"
+  element={
+    <ProtectedRoute>
+      <Feedback />
+    </ProtectedRoute>
+  }
+/>
+<Route
+  path="/challenges/:id"
+  element={
+    <ProtectedRoute>
+      <ChallengeRedirect />
+    </ProtectedRoute>
+  }
+/>
+<Route
+  path="/challenges/:id/work"
+  element={
+    <ProtectedRoute>
+      <ChallengeWork />
+    </ProtectedRoute>
+  }
+/>
+
+<Route
+  path="/teachbacks/:id/work"
+  element={
+    <ProtectedRoute>
+      <TeachbackWork />````
+    </ProtectedRoute>
+  }
+/>
+<Route
+  path="/teachbacks/:id/work"
+  element={
+    <ProtectedRoute>
+      <TeachbackWork />
+    </ProtectedRoute>
+  }
+/>
+<Route
+  path="/portfolio"
+  element={
+    <ProtectedRoute>
+      <Portfolio />
+    </ProtectedRoute>
+  }
+/>
     </Routes>
     </>
   )

@@ -1,3 +1,4 @@
+// src/Components/Header.jsx
 import React, { useState, useEffect, useMemo, useRef } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { useAuth } from "@/contexts/AuthContext";
@@ -19,7 +20,6 @@ const Header = () => {
     typeof window !== "undefined" ? window.innerWidth > 768 : true
   );
   const [accountOpen, setAccountOpen] = useState(false);
-
   const accountRef = useRef(null);
 
   // Close account dropdown on outside click or ESC
@@ -68,8 +68,7 @@ const Header = () => {
   };
 
   const displayName =
-    user?.displayName ||
-    (user?.email ? user.email.split("@")[0] : "User");
+    user?.displayName || (user?.email ? user.email.split("@")[0] : "User");
 
   const avatarInitial =
     (user?.displayName?.[0] || user?.email?.[0] || "U").toUpperCase();
