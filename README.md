@@ -5,7 +5,11 @@ Peer-to-peer learning app where students learn by creating, accepting, and teach
 
 
 ## Stack
-React JS· Tailwind CSS · Framer Motion · Firebase Auth · Cloud Firestore
+React JS
+Tailwind CSS
+Framer Motion
+Firebase Auth
+Cloud Firestore
 
 ## Quick Start
 ```bash
