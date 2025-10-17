@@ -1,8 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom"; // import for navigation
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/Components/ui/button";
+import { Card, CardContent } from "@/Components/ui/card";
 import studentillus from "../assets/studentillus.png";
 
 const Home = () => {

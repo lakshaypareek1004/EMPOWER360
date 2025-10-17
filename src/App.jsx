@@ -1,6 +1,6 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
-import ProtectedRoute from "@/components/ProtectedRoute";
+import ProtectedRoute from "@/Components/ProtectedRoute";
 import Header from './Components/Header'
 import Home from './Pages/Home'
 import About from './Pages/About'
@@ -102,14 +102,6 @@ element={
   }
 />
 
-<Route
-  path="/teachbacks/:id/work"
-  element={
-    <ProtectedRoute>
-      <TeachbackWork />````
-    </ProtectedRoute>
-  }
-/>
 <Route
   path="/teachbacks/:id/work"
   element={
